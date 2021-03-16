@@ -3,17 +3,13 @@ from os.path import expanduser, exists
 from json import load, dump
 
 DEFAULT_GH_ORG = environ.get("DC_GH_ORG", "Shuttl-Tech")
-DEFAULT_CACHE_FILE = "~/.dronecli-cache"
-DEFAULT_ASGARD_URL = environ.get("DC_ASGARD_URL", "https://asgard.shuttl.xyz")
-DEFAULT_POD_REPO = environ.get("DC_POD_REPO", "infra-ephemeral")
+DEFAULT_CACHE_FILE = "~/.autocli-cache"
 
 
 class Config:
     def __init__(self, config_path="~/.autoclirc"):
         # These are values that aren't configurable at the moment
         self.cache_file = expanduser(DEFAULT_CACHE_FILE)
-        self.asgard_url = DEFAULT_ASGARD_URL
-        self.pod_repo = DEFAULT_POD_REPO
 
         self.config_path = expanduser(config_path)
         if not exists(self.config_path):
