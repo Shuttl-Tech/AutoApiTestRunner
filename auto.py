@@ -16,14 +16,6 @@ def user(username):
     print('Name: {}, Repos: {}, Bio: {}'.format(r['name'], r['public_repos'], r['bio']))
 
 
-@cli.command()
-@click.argument('username')
-def repos(username):
-    r = requests.get('https://api.github.com/users/{}/repos'.format(username)).json()
-    for i in range(len(r)):
-        print(r[i]['name'])
-
-
 class BearerAuth(requests.auth.AuthBase):
     def __init__(self, token):
         self.token = token
@@ -66,7 +58,7 @@ def runner(repo_name, branch):
 @click.option(
     "--full-name",
     prompt=True,
-    help="Your full name. Used to show friendly names in build logs and deployment",
+    help="Your full name.",
 )
 @click.option(
     "--github-org",
