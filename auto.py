@@ -56,7 +56,6 @@ def runner(repo_name, branch):
 @click.option(
     "--drone-token",
     prompt=True,
-    hide_input=True,
     help="Drone server token. Leave empty to use existing token",
 )
 @click.option(
