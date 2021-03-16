@@ -1,0 +1,8 @@
+README.md
+setup.py
+AutoApiTestRunner.egg-info/PKG-INFO
+AutoApiTestRunner.egg-info/SOURCES.txt
+AutoApiTestRunner.egg-info/dependency_links.txt
+AutoApiTestRunner.egg-info/entry_points.txt
+AutoApiTestRunner.egg-info/requires.txt
+AutoApiTestRunner.egg-info/top_level.txt
