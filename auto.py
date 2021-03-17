@@ -1,6 +1,6 @@
 import requests
 import click
-from config import config
+from AutoApiTestRunner.config import config
 
 
 @click.group()
