@@ -8,7 +8,6 @@ setup(
     author="Kshama Singh",
     author_email="kshama.singh@shuttl.com",
     description="A Command Line Interface",
-    # long_description=open('README.rst').read(),
     packages=setuptools.find_packages(),
     py_modules=['AutoApiTestRunner'],
     install_requires=[
@@ -17,8 +16,5 @@ setup(
     entry_points='''
         [console_scripts]
         auto=auto:cli
-    ''',
-    classifiers=(
-
-    ),
+    '''
 )
