@@ -10,10 +10,10 @@ __pycache__/
 .Python
 build/
 develop-eggs/
-dist/
 downloads/
 eggs/
 .eggs/
+*.egg-info
 lib/
 lib64/
 parts/
@@ -22,7 +22,6 @@ var/
 wheels/
 pip-wheel-metadata/
 share/python-wheels/
-*.egg-info/
 .installed.cfg
 *.egg
 MANIFEST
@@ -105,10 +104,12 @@ celerybeat.pid
 .env
 .venv
 env/
-venv/
+autoenv/
 ENV/
 env.bak/
 venv.bak/
+.idea/
+.DS_Store
 
 # Spyder project settings
 .spyderproject
