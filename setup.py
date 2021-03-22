@@ -7,7 +7,7 @@ setup(
     url="https://github.com/kshamashuttl",
     author="Kshama Singh",
     author_email="kshama.singh@shuttl.com",
-    description="A Command Line Interface",
+    description="A Command Line Interface to run Shuttl API tests",
     packages=setuptools.find_packages(),
     py_modules=['AutoApiTestRunner'],
     install_requires=[
