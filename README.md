@@ -2,10 +2,10 @@
 Automation Command Line Tool
 
 ## Installation
-### Method-1: Using https://pypi.org/project/AutoApiTestRunner/1.0.0/
+### Method-1: Using https://pypi.org/project/AutoApiTestRunner/1.0.1/
 
 Installation Command:
-* pip install AutoApiTestRunner==1.0.0
+* sudo -H pip install AutoApiTestRunner==1.0.1
 
 ### Method-2: Using pip
 
