@@ -6,15 +6,20 @@ import json
 
 @click.group()
 def cli():
-    """Command Line tool to access Drone.io API."""
+    """Command Line tool to access Drone.io API                                     .
+    One time setup command:                                                         .
+    - auto init                                                                     .
+    Add following data.                                                             .
+         Drone token:your personal token (https://ci.shuttl.xyz/account)            .
+         Drone host:https://ci.shuttl.xyz/                                          .
+         Full name: Your Name                                                       .
+         Github org [Shuttl-Tech]:Shuttl-Tech                                       .
+                                                                                    .
+    Run API Sanity command                                                          .
+    - auto runner                                                                   .
+          Repo name:Name of GH repo                                                 .
+          Branch:Custom branch name"""
     pass
-
-
-@cli.command()
-@click.argument('username')
-def user(username):
-    r = requests.get('https://api.github.com/users/{}'.format(username)).json()
-    print('Name: {}, Repos: {}, Bio: {}'.format(r['name'], r['public_repos'], r['bio']))
 
 
 class BearerAuth(requests.auth.AuthBase):
@@ -48,7 +53,8 @@ def runner(repo_name, branch):
     response = requests.post(
         config.drone_host + '/api/repos/' + config.github_org + '/{}/builds?branch={}'.format(repo_name, branch),
         auth=BearerAuth(config.drone_token)).json()
-    print("Test Report: " + config.drone_host + '/' + config.github_org + '/' + repo_name + '/' + str(response['number']))
+    print("Test Report: " + config.drone_host + '/' + config.github_org + '/' + repo_name + '/' + str(
+        response['number']))
     print("********************************************************************")
     print("********************************************************************")
     print(json.dumps(response, indent=3))
