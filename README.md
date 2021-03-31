@@ -5,19 +5,23 @@ Automation Command Line Tool
 ### Method-1: Using https://pypi.org/project/AutoApiTestRunner/1.0.1/
 
 Installation Command:
-* sudo -H pip install AutoApiTestRunner==1.0.1
+
+    sudo -H pip install AutoApiTestRunner==1.0.1
 
 ### Method-2: Using pip
 
 Installation Command:
 NOTE: you must have a working git over ssh configuration.
 
-* ssh -T git@github.com
-    * “Hi kshamashuttl! You've successfully authenticated, but GitHub does not provide shell access.”
-* sudo -H python -m pip install --no-cache-dir "git+ssh://git@github.com/Shuttl-Tech/AutoApiTestRunner.git"
+    ssh -T git@github.com
+    
+    “Hi kshamashuttl! You've successfully authenticated, but GitHub does not provide shell access.”
+    
+    sudo -H python -m pip install --no-cache-dir "git+ssh://git@github.com/Shuttl-Tech/AutoApiTestRunner.git"
 
 Validate the installation by running
-- auto --help
+
+    auto --help
 
 ## Configuration
 you need to configure it before it can access Drone API.
@@ -26,7 +30,8 @@ Now head over to https://ci.shuttl.xyz/account, under *Example CLI Usage* sectio
 Copy both of them and keep them safe.
 
 You can start initialisation process by executing
-* auto init
+
+    auto init
 
 and provide the information on prompt.
 * Drone token:your personal token (https://ci.shuttl.xyz/account)
@@ -37,6 +42,8 @@ and provide the information on prompt.
 
 ## Trigger API Sanity
 
-* Command:auto runner
-    * Repo name:Name of GH repo
-    * Branch:Custom branch name
+ Command:
+  
+    auto runner
+    Repo name:Name of GH repo
+    Branch:Custom branch name
