@@ -53,8 +53,10 @@ def runner(repo_name, branch):
     response = requests.post(
         config.drone_host + '/api/repos/' + config.github_org + '/{}/builds?branch={}'.format(repo_name, branch),
         auth=BearerAuth(config.drone_token)).json()
-    print("Test Report: " + config.drone_host + '/' + config.github_org + '/' + repo_name + '/' + str(
-        response['number']))
+    if response is not None:
+        print("Test Report: " + config.drone_host + '/' + config.github_org + '/' + repo_name + '/' + str(response['number']))
+    else:
+        print("Test Report: " + config.drone_host + '/' + config.github_org + '/' + repo_name + '/')
     print("********************************************************************")
     print("********************************************************************")
     print(json.dumps(response, indent=3))
